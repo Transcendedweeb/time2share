@@ -1,0 +1,474 @@
+/* MAIN */
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Mulish', sans-serif;
+}
+
+:root
+{
+    --dark: #1a1a1a;
+    --light: #f2ecff;
+    --gray: #454545;
+    --tint: #f9b464;
+    --tint2: #d27c6a;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+body
+{
+    background: linear-gradient(45deg, #1a1a1a, #4c3949, #915665, #d27c6a, #f9b464);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+main
+{
+    padding-top: 20vh;
+    padding-bottom: 25vh;
+}
+
+.BackgroundDrawing
+{
+    position: fixed;
+    z-index: -1;
+    bottom:0;
+    right:0;
+}
+
+header
+{
+    margin: 1vw;
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    background-color: rgba(242, 236, 255, 0.3);
+    border-radius: 5rem;
+    z-index: 10;
+    position: fixed;
+    width: 96vw;
+}
+
+header h1
+{
+    font-size: 64px;
+    flex-grow: 3;
+    margin-left: 1%;
+}
+
+header h1 a
+{
+    font-family: 'Pacifico', cursive;
+    color: var(--dark);
+}
+
+header button
+{
+    background-color: var(--dark);
+    height: 50%;
+    border: none;
+    border-radius: 2rem;
+    padding: 1%;
+    box-shadow: inset 0 0 20px var(--tint);
+}
+
+header button a
+{
+    font-size: 2rem;
+    color: var(--tint);
+}
+
+/* ------------------------------------------------ */
+/* Front page */
+.FrontBody main
+{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.FrontBody main section
+{
+    width: 50%;
+    height: 50%;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    background-color: var(--dark);
+    color: var(--light);
+    border-radius: 1rem;
+    box-shadow: 0 0 20px var(--dark);
+}
+
+.FrontBody main section figure img
+{
+    width: 150px;
+    height: 150px;
+}
+
+.FrontBody main section div
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.FrontBody main section a
+{
+    color: var(--dark);
+    background-color: var(--tint);
+    border: none;
+    border-radius: 2rem;
+    box-shadow: inset 0 0 20px var(--dark);
+    margin: auto;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    width: 50%;
+    font-size: 20px;
+    text-align: center;
+}
+
+.FrontBody main section div h2
+{
+    justify-self: center;
+    color: var(--tint);
+    font-size: 3vh;
+    flex-grow: 1.1;
+}
+
+.FrontBody main section div p
+{
+    flex-grow: 1.2;
+}
+
+.LogoutButton
+{
+    background-color: var(--dark);
+    color: var(--tint);
+    padding: 1vw;
+    font-size: 1vw;
+    border: none;
+    cursor: pointer;
+    margin-left: .5vw;
+}
+
+/* Dropdown Button */
+.DropdownButton 
+{
+    background-color: var(--dark);
+    color: var(--tint);
+    padding: 1vw;
+    font-size: 1vw;
+    border: none;
+    cursor: pointer;
+}
+
+.DropDown 
+{
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    margin-left: 25vw;
+    margin-top: 1vh;
+}
+
+.Dropdown-Content 
+{
+    display: none;
+    background-color: var(--dark);
+    min-width: 10vw;
+    border: 1px solid var(--tint);
+    z-index: 1;
+    padding: .6vw;
+}
+
+.Dropdown-Content button 
+{
+    background-color: var(--tint);
+    color: black;
+    border: none;
+    padding: .5vw;
+    cursor: pointer;
+
+}
+
+.show{display:block;} 
+
+/* ------------------------------------------------ */
+/* Item Page */
+.ItemBody main h2
+{
+    font-size: 58px;
+    width: 40vw;
+    border-radius: 2rem;
+    border: solid 2px var(--light);
+    background-color: var(--dark);
+    color: var(--tint);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ItemBody main .UpperSection
+{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 2vh;
+    margin-left: 20vw;
+    background-color: var(--dark);
+    border-radius: 2rem;
+    width: 55vw;
+    box-shadow: 0 0 20px var(--dark);
+}
+
+.ItemBody main .UpperSection img
+{
+    border-radius: 0.5rem;
+    border: solid 3px var(--tint);
+}
+
+.ItemBody main .UpperSection div
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    width: 20vw;
+    color: var(--light);
+    justify-content: center;
+}
+
+.ItemBody main .UpperSection div p
+{
+    font-size: 20px;
+}
+
+.ItemBody main .UpperSection button
+{
+    height: 8vh;
+    margin: auto;
+    align-self: center;
+    width: 10vw;
+    font-size: 25px;
+    background-color: var(--gray);
+    box-shadow: inset 0 0 20px var(--dark);
+    border: none;
+    border-radius: .5rem;
+}
+
+.ItemBody main .UpperSection a
+{
+    height: 50%;
+    margin: auto;
+    text-align: center;
+    font-size: 25px;
+    background-color: var(--tint);
+    color: var(--dark);
+    box-shadow: inset 0 0 20px var(--dark);
+    border: none;
+    border-radius: .5rem;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.ItemBody main .UpperSection button:hover
+{
+    cursor: pointer;
+}
+
+.ItemBody main .LowerSection
+{
+    margin-top: 2vh;
+    padding: 2vh;
+    margin-left: 20vw;
+    background-color: var(--dark);
+    border-radius: 2rem;
+    width: 55vw;
+    box-shadow: 0 0 20px var(--dark);
+}
+
+.ItemBody main .LowerSection h3
+{
+    text-align: center;
+    color: var(--tint);
+    font-size: 26px;
+    border-bottom: solid 2px var(--tint);
+}
+
+.ItemBody main .LowerSection p
+{
+    margin-top: 2px;
+    color: var(--light);
+    font-size: 18px;
+}
+/* ------------------------------------------------ */
+/* Account Page */
+.AccountBody
+{
+    overflow: hidden;
+}
+
+.AccountBody main
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.AccountBody main h1
+{
+    font-size: 58px;
+    width: 40vw;
+    border-radius: 2rem;
+    border: solid 2px var(--light);
+    background-color: var(--dark);
+    color: var(--tint);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.AccountBody main .AccountInfo p
+{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--light);
+    background-color: var(--dark);
+    width: 20vw;
+    border-radius: 2rem;
+}
+
+.AccountBody main article
+{
+    align-self: center;
+    overflow-y: scroll;
+    width: 50vw;
+    height: 50vh;
+    background-color: rgba(242, 236, 255, 0.3);
+    border-radius: 0.5rem;
+    margin-top: 1vh;
+}
+
+.AccountBody main article section a
+{
+    color: var(--light);
+}
+
+.AccountBody main article section div
+{
+    background-color: var(--dark);
+    margin: 1%;
+    padding: 1%;
+    border-radius: .5rem;
+    
+}
+
+.AccountBody main article section div h2
+{
+    text-align: center;
+    color: var(--tint);
+}
+
+.AccountBody main article section div p
+{
+    color: var(--light);
+}
+
+.AccountBody h3
+{
+    color: var(--tint);
+    margin-top: 1vh;
+}
+
+/* ------------------------------------------------ */
+/* Create page */
+.CreateBody main
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.CreateBody main h1
+{
+    background-color: var(--dark);
+    color: var(--tint);
+    margin-bottom: 1vh;
+    width: 52vw;
+    border-radius: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.CreateBody main form
+{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark);
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    padding-bottom: 1.6rem;
+    padding-top: .5rem;
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1rem;
+}
+
+.CreateBody main form label
+{
+    color: var(--tint);
+}
+
+.CreateBody main form .input
+{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.CreateBody main form button
+{
+    background-color: var(--tint);
+    color: var(--dark);
+    border: solid 1px var(--gray);
+    padding: .8rem;
+    width: 10vw;
+    align-self: center;
+    cursor: pointer;
+    font-size: large;
+    font-weight: bold;
+}
+
+.CreateBody main form a
+{
+    color: var(--dark);
+    margin-top: 1vh;
+    background-color: var(--tint2);
+    width: 10vw;
+    align-self: center;
+    cursor: pointer;
+    font-size: large;
+    font-weight: bold;
+}
+
+/* ------------------------------------------------ */
+/*  Page */
