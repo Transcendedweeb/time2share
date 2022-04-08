@@ -62,5 +62,15 @@ class ItemSeeder extends Seeder
             'is_loaned' => false,
             'id_lender' => 3,
         ]);
+
+        DB::table('items')->insert([
+            'item_name' => 'Hammer',
+            'description' => 'To smash things.',
+            'tag' => 'other',
+            'image' => '/img/tools.png',
+            'loan_time' => 420,
+            'is_loaned' => false,
+            'id_lender' => 1,
+        ]);
     }
 }
