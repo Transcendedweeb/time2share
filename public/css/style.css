@@ -240,6 +240,8 @@ header button a
 {
     border-radius: 0.5rem;
     border: solid 3px var(--tint);
+    width: 250px;
+    height: 250px;
 }
 
 .ItemBody main .UpperSection div
@@ -471,4 +473,109 @@ header button a
 }
 
 /* ------------------------------------------------ */
-/*  Page */
+/* media Queries */
+
+@media only screen and (max-width: 900px) 
+{
+    /* MAIN */
+.BackgroundDrawing
+{
+    display: none;
+}
+
+header h1
+{
+    font-size: 5vw;
+}
+
+header button
+{
+    padding: 3vw;
+}
+
+header button a
+{
+    font-size: 2vw;
+}
+
+/* ------------------------------------------------ */
+/* Front page */
+.FrontBody main section
+{
+    width: 95%;
+}
+
+.FrontBody main section figure img
+{
+    width: 15vw;
+    height: 15vw;
+}
+
+.FrontBody main section a
+{
+    width: 10vw;
+    font-size: 3vw;
+}
+
+.FrontBody main section div h2
+{
+    justify-self: center;
+    color: var(--tint);
+    font-size: 3vh;
+    flex-grow: 1.1;
+}
+
+/* Dropdown Button */
+.DropdownButton 
+{
+    padding: 1vw;
+    font-size: 3vw;
+}
+
+.DropDown 
+{
+    margin-left: 5vw;
+    margin-top: 1vh;
+}
+
+.LogoutButton
+{
+    padding: 1vw;
+    font-size: 3vw;
+}
+
+/* ------------------------------------------------ */
+/* Item Page */
+.ItemBody main h2
+{
+    font-size: 5vw;
+}
+
+.ItemBody main .UpperSection
+{
+    width: 95%;
+    margin-left: .3%;
+}
+
+
+.ItemBody main .UpperSection div p
+{
+    font-size: 20px;
+}
+
+/* Account Page */
+.AccountBody main h1
+{
+    font-size: 5vw;
+}
+
+.AccountBody main .AccountInfo p
+{
+    font-size: 2vw;
+}
+
+.AccountBody main article
+{
+    width: 100vw;
+}
+}
