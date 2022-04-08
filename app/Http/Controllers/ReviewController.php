@@ -28,7 +28,7 @@ class ReviewController extends Controller
         $item->id_borrower = NULL;
         $item->save();
 
-        return UserController::accountPage();
+        return redirect("/myaccount");
     }
 
     public function skip($itemId)
@@ -37,6 +37,6 @@ class ReviewController extends Controller
         $item->is_loaned = FALSE;
         $item->id_borrower = NULL;
         $item->save();
-        return UserController::accountPage();
+        return redirect("/myaccount");
     }
 }
